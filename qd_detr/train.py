@@ -22,6 +22,8 @@ from qd_detr.inference import eval_epoch, start_inference, setup_model
 from utils.basic_utils import AverageMeter, dict_to_markdown
 from utils.model_utils import count_parameters
 
+import ipdb
+
 
 import logging
 logger = logging.getLogger(__name__)
@@ -106,6 +108,8 @@ def train(model, criterion, optimizer, lr_scheduler, train_dataset, val_dataset,
         logger.info("CUDA enabled.")
         model.to(opt.device)
 
+    ipdb.set_trace()
+    
     tb_writer = SummaryWriter(opt.tensorboard_log_dir)
     tb_writer.add_text("hyperparameters", dict_to_markdown(vars(opt), max_str_len=None))
     opt.train_log_txt_formatter = "{time_str} [Epoch] {epoch:03d} [Loss] {loss_str}\n"

@@ -7,7 +7,7 @@ exp_id=pt
 
 ######## data paths
 train_path=data/subs_train.jsonl
-eval_path=data/highlight_val_release.jsonl
+eval_path=data/updated_highlight_val_release.jsonl
 eval_split_name=val
 
 ######## setup video+text features

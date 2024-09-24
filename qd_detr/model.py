@@ -13,6 +13,7 @@ from qd_detr.transformer import build_transformer
 from qd_detr.position_encoding import build_position_encoding
 from qd_detr.misc import accuracy
 import numpy as np
+
 def inverse_sigmoid(x, eps=1e-3):
     x = x.clamp(min=0, max=1)
     x1 = x.clamp(min=eps)
